@@ -4,7 +4,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
-        <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/83490598"/>
+        <link href='https://www.caranya.my.id/favicon.ico' rel='icon' type='image/x-icon'/>
+        <link href='https://cdn.caranya.my.id/img/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'/>
+        <link href='https://cdn.caranya.my.id/img/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'/>
+        <link href='https://cdn.caranya.my.id/img/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'/>
         <title>Member Caranya My Id!</title>
     </head>
     <body>
@@ -41,6 +44,18 @@
 &lt;/div&gt;</pre>
                 </div>
             </div>
+
+            <h2 class="text-center">Member CMI</h2>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Member</th>
+                        <th>Website</th>
+                    </tr>
+                </thead>
+                <tbody id="member">
+                </tbody>
+            </table>
 
             <h2 class="text-center mt-3">FAQ</h2>
             <div class="accordion" id="accordionExample">
@@ -95,6 +110,34 @@
                 </footer>
             </div>
 
+            <script type="text/javascript">
+                let getData = "https://member.caranya.my.id/data.json";
+                let request = new XMLHttpRequest();
+                request.open('GET', getData);
+                request.responseType = 'json';
+                request.send();
+                request.onload = function() {
+                  const cmi = request.response;
+
+                  var table = document.getElementById("member");
+
+                  for (var i=0; i<cmi.length; i++) {
+                    var row = document.createElement("tr");
+
+                    var membernya = document.createElement("td");
+                    membernya.innerHTML = cmi[i].member;
+                    row.appendChild(membernya);
+
+                    var url = cmi[i].url;
+                    var hostname = new URL(url).hostname;
+                    var urlnya = document.createElement("td");
+                    urlnya.innerHTML = "<a href='"+url+"' target='_blank' rel='nofollow noopener noreferrer'>"+hostname+"</a>";
+                    row.appendChild(urlnya);
+
+                    table.appendChild(row);
+                  }
+                }
+            </script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
         </div>
     </body>
