@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id-ID" dir="ltr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,6 +9,35 @@
         <link href='https://cdn.caranya.my.id/img/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'/>
         <link href='https://cdn.caranya.my.id/img/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'/>
         <title>Member Caranya My Id!</title>
+        <style type="text/css">
+            a{
+                text-decoration: none;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            @media(prefers-color-scheme: dark){
+                body{
+                    background-color: var(--bs-dark);
+                    color: var(--bs-white);
+                }
+                a{
+                    color: var(--bs-info);
+                }
+                pre{
+                    color: var(--bs-dark);
+                }
+                .accordion-body{
+                    color: var(--bs-dark);
+                }
+                .table{
+                    color: var(--bs-light);
+                }
+                #member>tr:hover{
+                    color: var(--bs-white);
+                }
+            }
+        </style>
     </head>
     <body>
         <div class="container">
@@ -19,19 +48,18 @@
             </section>
 
             <div class="text-center" id="cmi-wrapper">
-                <a href="https://member.caranya.my.id" id="previousBtn" class="cmi-anchor" title="Previous">‹</a>
+                <a href="https://member.caranya.my.id" id="previousBtn" class="cmi-anchor" title="Previous" rel="nofollow noreferrer noopener">‹</a>
                 <a href="https://member.caranya.my.id" class="cmi-logo" title="Member CMI" alt="Member CMI"></a>
-                <a href="https://member.caranya.my.id" id="nextBtn" class="cmi-anchor" title="Next">›</a>
+                <a href="https://member.caranya.my.id" id="nextBtn" class="cmi-anchor" title="Next" rel="nofollow noreferrer noopener">›</a>
                 <script src="https://member.caranya.my.id/embed.min.js"></script>
                 <noscript>Logo tidak di tampilkan. Untuk menampilkan logo harap nyalakan fitur JavaScript pada browser anda, terimakasih.</noscript>
             </div>
 
-            <p class="text-center mt-5">Bergabung bersama kami dan perkuat tali silaturahmi para coder's yang gatau gimana caranya :)</p>
+            <p class="text-center mt-5">Bergabung bersama kami dan perkuat tali silaturahmi para coder's yang gatau gimana caranya, supaya sama-sama tahu :)</p>
 
             <h2 class="text-center mt-5">Cara Bergabung</h2>
             <p>
-                Kirimkan surel ke email berikut ini <a href="mailto:contact@caranya.my.id">contact@caranya.my.id</a> dengan pesan <b>Nama</b> kamu serta <b>Website</b> kamu. Kemudian akan kami tinjau dan proses secepatnya.<br />
-                Setelah itu, Masukkan kode berikut ini ke website kamu:
+                Masukkan kode dibawah ini ini ke website kamu.<br/>Kemudian masukkan <b>nama</b> dan juga <b>website</b> kamu <a href="https://github.com/CaranyaMyId/Member/blob/main/data.json" rel="nofollow noreferrer noopener" target="_blank">disini</a>
             </p>
             <div class="row">
                 <div class="col-sm">
@@ -46,7 +74,7 @@
             </div>
 
             <h2 class="text-center">Member CMI</h2>
-            <table class="table table-hover">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Member</th>
@@ -102,10 +130,7 @@
             <div class="my-5">
                 <footer class="text-center">
                     <div class="text-center p-3">
-                        <b>
-                            &copy; 2021 Copyright
-                            <a class="" href="https://member.caranya.my.id/">Member CMI</a>
-                        </b>
+                        <b>&copy; 2021 <a class="" href="https://member.caranya.my.id/">Member CMI</a></b>
                     </div>
                 </footer>
             </div>
