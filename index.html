@@ -3,12 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="noindex, nofollow" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="preload stylesheet" as="style" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href='https://www.caranya.my.id/favicon.ico' rel='icon' type='image/x-icon'/>
-        <link href='https://cdn.caranya.my.id/img/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'/>
-        <link href='https://cdn.caranya.my.id/img/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'/>
-        <link href='https://cdn.caranya.my.id/img/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'/>
         <title>Member Caranya My Id!</title>
         <style type="text/css">
             a{
@@ -112,7 +108,7 @@
                     var url = cmi[i].url;
                     var hostname = new URL(url).hostname;
                     var urlnya = document.createElement("td");
-                    urlnya.innerHTML = "<a href='"+url+"' target='_blank' rel='nofollow noopener noreferrer'>"+hostname+"</a>";
+                    urlnya.innerHTML = "<a href='"+url+"' target='_blank' rel='noreferrer'>"+hostname+"</a>";
                     row.appendChild(urlnya);
 
                     table.appendChild(row);
